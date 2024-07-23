@@ -244,7 +244,7 @@ export const TableModel = ({ selectedBubble, onClose, show }) => {
               <div className='crypto-image'>
                 <div className='crypto-logo'>
                   <img
-                    src={`https://cryptobubbles.net/backend/${selectedBubble.image}`}
+                    src={`${process.env.BUBBLE_IMAGE_PATH}/${selectedBubble.image}`}
                     layout='fill'
                     objectFit='contain'
                     alt={selectedBubble.name}

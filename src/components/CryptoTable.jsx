@@ -3,6 +3,7 @@ import _ from 'lodash';
 import { TableModel } from './Modal';
 import  '../../assets/Table.Module.css'
 const apiAssets = process.env.NEXT_PUBLIC_API_ASSETS;
+const imagePath = process.env.BUBBLE_IMAGE_PATH;
 
 const CryptoTable = ({ tableData }) => {
     const [clickedBubble, setClickedBubble] = useState(null);
@@ -57,8 +58,9 @@ const CryptoTable = ({ tableData }) => {
                             <td>{index + 1}</td>
                             <td>
                                 <button className="solid-button currency-name" onClick={() => handleSelect(item)}>
-                                        <img
-                                            src={`https://cryptobubbles.net/backend/${item.image}`}
+                                        <img                                       
+                                            src={`${imagePath}/${item.image}`}
+                                            // src={`https://cryptobubbles.net/backend/${item.image}`}
                                             alt={`Logo of ${item.name}`}
                                             title={`Logo of ${item.name}`}
                                             width={24}
